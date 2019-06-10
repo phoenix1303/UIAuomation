@@ -1,24 +1,35 @@
 package com.oliulka.demoUI.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-
 public class Page01HomePage{
 	
-    private static WebElement element = null;
-	
-    public static WebElement lnk_MyAccount(WebDriver driver)
+    public  WebElement homepageAmazonLogo (WebDriver driver)
     {
-    	element = driver.findElement(By.cssSelector("a[href='http://shop.demoqa.com/my-account/']"));
-    	return element;
+    	return driver.findElement(By.cssSelector("a[href='/ref=nav_logo']"));
     }
  
-    public static WebElement lnk_LogOut(WebDriver driver)
+    public WebElement homepageAmazonSearchBar(WebDriver driver)
     {
-    	element = driver.findElement(By.id("account_logout"));
-    	return element;
+    	return driver.findElement(By.id("twotabsearchtextbox"));
     }
- 
+    
+    public  WebElement homepageAmazonSearchButton(WebDriver driver)
+    {
+    	return driver.findElement(By.cssSelector("input.nav-input[value='Go']"));
+    }
+    
+    public WebElement homepageAmazonNavigation(WebDriver driver)
+    {
+    	return driver.findElement(By.id("nav-xshop"));
+    }
+    
+    public WebElement homepageAmazonHamburgerMenu(WebDriver driver)
+    {
+    	return driver.findElement(By.id("nav-hamburger-menu"));
+    }
 }
